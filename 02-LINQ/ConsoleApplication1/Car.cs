@@ -8,7 +8,7 @@ namespace TSD.Linq.Cars
    
     public class Car
     {
-        //task #2
+
         private string _make;
         public string make
         {
@@ -29,12 +29,8 @@ namespace TSD.Linq.Cars
             set { _sales2014 = value; }
         }
 
-
-        //task #6
         public int? NumberOfSeats { get; set; }
 
-
-        //task #3
         public Car(string _make)
         {
             this._make = _make;
@@ -43,7 +39,6 @@ namespace TSD.Linq.Cars
 
         public static Car Init()
         {
-            //task #4
             Car std = new Car("initial car")
             {
                 _sales2015 = 30000,

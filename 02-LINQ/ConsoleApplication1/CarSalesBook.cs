@@ -19,7 +19,6 @@ namespace TSD.Linq.Cars
 
         private IList<Car> GenerateCars()
         {
-            //task #5
             var cars = new List<Car>()
             {
                 new Car("skoda") {  sales2015 = 45529, sales2014 = 44243 },
