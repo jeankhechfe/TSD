@@ -22,12 +22,12 @@ namespace TSD.Linq.Cars
             //task #5
             var cars = new List<Car>()
             {
-                new Car("skoda") {  _sales2015 = 45529, _sales2014 = 44243 },
-                new Car("Toyota") {  _sales2015 = 36465, _sales2014 = 31484 },
-                new Car("BMW") {  _sales2015 = 9549, _sales2014 = 7714 },
+                new Car("skoda") {  sales2015 = 45529, sales2014 = 44243 },
+                new Car("Toyota") {  sales2015 = 36465, sales2014 = 31484 },
+                new Car("BMW") {  sales2015 = 9549, sales2014 = 7714 },
             };
 
-            IList<Car> sortedCars = cars.OrderBy(c => c._sales2015).ToList();
+            IList<Car> sortedCars = cars.OrderBy(c => c.sales2015).ToList();
 
             return cars;
         }

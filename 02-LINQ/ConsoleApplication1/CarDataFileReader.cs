@@ -16,20 +16,26 @@ namespace ConsoleApplication1
             ///
             /// TODO: Provide file path
             /// 
-            TextReader textReader = new StreamReader(@"D:\cars.csv");
+            TextReader textReader = new StreamReader(@"D:\Univ Poznan\1st semester\Technologies of Software Development\2nd Lecture\Cars_Stat.csv");
             textReader.ReadLine();
             string[] linesFromFile = textReader.ReadToEnd().Split('\n');
             foreach (var line in linesFromFile)
             {
                 string[] fields = line.Split(';');
-                Car newCar = new Car();
-                newCar.SetMake(fields[0]);
-                newCar.SetSales2014(int.Parse(fields[1]));
-                newCar.SetSales2015(int.Parse(fields[2]));
+                Car newCar = new Car(fields[0]);
+                newCar.sales2014 = int.Parse(fields[1]);
+                newCar.sales2015 = int.Parse(fields[2]);
                 cars.Add(newCar);
             }
 
             return cars;
+        }
+
+        public IEnumerable<string> top3Sales()
+        {
+            var cars = ReadCarsFromCSVFile();
+            IEnumerable<string> top3 = from car in cars orderby car.sales2014 select car.make;
+            return top3.Take(3);
         }
     }
 }
