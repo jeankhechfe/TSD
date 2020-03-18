@@ -13,7 +13,12 @@ namespace ConsoleApplication1
         {
             Car initCar = Car.Init();
             CarSalesBook carSalesBook = new CarSalesBook();
-
+            CarDataFileReader cdfr = new CarDataFileReader();
+            var cars = cdfr.top3Sales();
+            foreach (var car in cars)
+            {
+                Console.WriteLine(car);
+            }
             Console.ReadLine();
 
         }
