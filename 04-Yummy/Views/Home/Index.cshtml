@@ -2,7 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center" style="margin-top:20%">
+<div class="text-center" style="margin-top:50px">
     <h1 class="display-4">Welcome to YUMMY</h1>
     <q>You learn to cook so that you don't have to be a slave to recipes.<br>You get what's in season and you know what to do with it.</q>
+</div>
+<div class="row" style="margin-top:50px">
+    <div class="col-md-6 offset-md-3">
+        <form method="get" action="/Recipes">
+            <input class="form-control" type="text" name="searchString" placeholder="Search Recipes" aria-label="Search">
+        </form>
+    </div>
 </div>
