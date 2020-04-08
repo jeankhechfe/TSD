@@ -10,6 +10,8 @@ using Yummy.Models;
 
 namespace Yummy.Controllers
 {
+    [Route("qqq")]
+    [HttpGet("{menuId}/menuitems")]
     public class RecipesController : Controller
     {
         private readonly YummyContext _context;
